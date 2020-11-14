@@ -1,9 +1,24 @@
 body, html {
     height: 100%;
+    font-family: "Fira Sans",Helvetica,Arial,sans-serif;
   }
+
+  .underimage {
+    margin-bottom: 0;
+    padding-left: 2.5rem;
+    background-color: #69dfe2;
+    color: #22356d;
+    line-height: 3rem;
+    font-weight: bold;
+  }
+
+  .blue {
+    background-color: #21346C;
+  }
+
   .bg {
     /* The image used */
-    background-image:  url("img/padel-wallpaper.jpg");
+    background-color: #21346C;
   
     /* Full height */
     height: 100%;
