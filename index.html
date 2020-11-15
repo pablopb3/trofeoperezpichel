@@ -1,71 +1,109 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-
     <title>Trofeo Perez-Pichel</title>
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+
     <link rel="shortcut icon" href="img/trophy-icon.png">
+
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 </head>
 
-<body>
+<body class="bg">
+    <nav class="navbar blue" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://www.trofeoperezpichel.com/">
+      <img src="/img/logopp.png" width="100" height="56" style="max-height:fit-content">
+    </a>
 
-    <div class="bg">
-        <div id="app" class="title centered typewriter"></div>
-    </div>
+    
+</nav>
+    <section class="section">
+        <div class="container">
+          <h1 class="title has-text-centered has-text-white is-uppercase">
+            Trofeo Pérez Pichel
+          </h1>
+          <p class="has-text-centered">
+            <img src="/img/trophy-icon.png" style="max-height:fit-content">
+        </p>
+        </div>
+      </section>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
-        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
-        crossorigin="anonymous"></script>
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column">
+                  <img src="/img/winners_perez.png" />
+                  <div class="underimage has-text-centered">
+                    <p>MARTÍN PÉREZ / PABLO PÉREZ</p>
+                  </div>
+                </div>
+                <div class="column has-text-centered">
+                  <a target="_blank" class="button is-danger is-uppercase title is-4" onclick="typewriter()">¿Ú-lo trofeo?</a>
+                  <p id="result_text" class="has-text-white is-uppercase"></p>
+                </div>
+                <div class="column">
+                  <img src="/img/loosers_picheles.png" />
+                  <div class="underimage has-text-centered">
+                    <p>MARCOS PICHEL / DANI PICHEL</p>
+                  </div>
+                </div>
+            </div>
+            <div class="columns has-text-centered title is-4">
+              <div class="column">
+                
+              </div>
+            </div>
+        </div>
+    </section>
+
+   
 </body>
-<script>var app = document.getElementById('app');
 
-    var typewriter = new Typewriter(app, {
-        loop: false, autoStart: true
-    });
+<script>
 
 
-    typewriter.stop().typeString('O trofeo está en cas...')
-        .pauseFor(2500)
-        .typeString(' PÉREZ!')
-        .pauseFor(2500)
-        .deleteAll()
-        .typeString('Porque son os mellores...')
-        .pauseFor(1500)
-        .deleteChars(14)
-        .typeString('únicos...')
-        .pauseFor(1500)
-        .deleteChars(9)
-        .typeString('inigualables...')
-        .pauseFor(1500)
-        .deleteAll()
-        .typeString('E os PICHELES son uns cheiróns!')
-        .pauseFor(1500)
-        .deleteAll()
-        .typeString('O trofeo está en cas...')
-        .pauseFor(2500)
-        .typeString(' PÉREZ!')
-        .pauseFor(2500)
-        .callFunction((state) => {
-            state.elements.cursor.style.animation = 'none'
-            state.elements.cursor.style.display = 'none'
-        })
-        .start();
+function typewriter() {
+  var typewriter = new Typewriter(document.getElementById('result_text'), {
+      loop: false, autoStart: false
+  });
+
+  typewriter.stop().typeString('O trofeo ... evidentemente está en ...')
+      .pauseFor(2500)
+      .typeString(' CAS PÉREZ!')
+      .pauseFor(1500)
+      .deleteAll()
+      .typeString('Porque son os mellores...')
+      .pauseFor(1500)
+      .deleteChars(14)
+      .typeString('únicos...')
+      .pauseFor(1500)
+      .deleteChars(9)
+      .typeString('inigualables...')
+      .pauseFor(1500)
+      .deleteAll()
+      .typeString('E os PICHELES son uns cheiróns!')
+      .pauseFor(1500)
+      .deleteAll()
+      .typeString('O trofeo está en cas...')
+      .pauseFor(2500)
+      .typeString(' PÉREZ!')
+      .pauseFor(2500)
+      .callFunction((state) => {
+          state.elements.cursor.style.animation = 'none'
+          state.elements.cursor.style.display = 'none'
+      })
+      .start();
+}
+
 
 </script>
 
