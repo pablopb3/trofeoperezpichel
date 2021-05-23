@@ -3,7 +3,7 @@
 Made with [Next.js](https://nextjs.org/docs), [TypeScript](https://www.typescriptlang.org/), [Netlify CMS](https://www.netlifycms.org/), [Tailwind CSS](https://tailwindcss.com/) and [Tailblocks](https://mertjf.github.io/tailblocks/).
 
 <div align="center">
-    <img src="./public/img/screenshot.png" width="800px"</img>
+    <img src="./public/img/screenshot.png" width="800px"</img> 
 </div>
 
 ## Getting Started
